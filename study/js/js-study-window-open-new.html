@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新窗体</title>
+</head>
+<body>
+<h1>源窗体</h1>
+<a href="javascript:void(0)" id="btnTestOldWin">执行源窗口函数</a>
+<div id="windowTarget"></div>
+<script type="text/javascript" src="http://res.suning.cn/public/v3/js/jquery.js"></script>
+<script type="text/javascript">
+    var PageTarget = {
+        showMessage: function (opt) {
+            var text = opt.text;
+            $("#windowTarget").append("<p>" + text + "</p>");
+        }
+    };
+    PageTarget.showMessage({
+        text: "源窗口函数，执行时间：" + new Date().getTime()
+    });
+    //源窗体的点击事件打开新创体
+    $("#btnTestOldWin").on("click", function () {
+        var parentWin=window.opener;
+        if(parentWin.PageSrc){
+            parentWin.PageSrc.showMessage({
+                text: "新窗口调用函数，执行时间：" + new Date().getTime()
+            });
+            PageTarget.showMessage({
+                text: "新窗口执行调用函数成功，执行时间：" + new Date().getTime()
+            });
+        }
+        return false;
+    });
+</script>
+</body>
+</html>
