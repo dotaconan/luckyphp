@@ -39,7 +39,7 @@ body {
 
 .aside-list li .number {
     float: right;
-    display: inline-block;
+    display: inline;
     zoom: 1;
     padding: 0 5px;
     text-align: center;
@@ -48,7 +48,8 @@ body {
 }
 
 .aside-list li .text {
-
+    float: left;
+    display: inline;
 }
 
 .aside-list li a {
@@ -71,4 +72,12 @@ body {
     color: #703987;
     background: #f0ebf3;
     text-decoration: none;
+}
+
+
+.fontawesome{
+
+}
+.fontawesome:hover{
+    color: #000000;
 }
