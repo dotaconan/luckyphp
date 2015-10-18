@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>窗体测试源窗体</title>
+</head>
+<body>
+<h1>源窗体</h1>
+<a href="javascript:void(0)" id="btnOpenNewWin">打开新窗口</a>
+
+<div id="windowSrc"></div>
+<script type="text/javascript" src="http://res.suning.cn/public/v3/js/jquery.js"></script>
+<script type="text/javascript">
+    /*
+     * PageSrc源窗体函数
+     */
+    var PageSrc = {
+        showMessage: function (opt) {
+            var text = opt.text;
+            $("#windowSrc").append("<p>" + text + "</p>");
+        }
+    };
+    PageSrc.showMessage({
+        text: "源窗口函数，执行时间：" + new Date().getTime()
+    });
+    //源窗体的点击事件打开新创体
+    $("#btnOpenNewWin").on("click", function () {
+        window.open("js-study-window-open-new.html");
+        return false;
+    });
+</script>
+</body>
+</html>

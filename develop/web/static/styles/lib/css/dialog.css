@@ -1,0 +1,208 @@
+.lc-dialog {
+  position: fixed;
+  z-index: 99999;
+  top: 30%;
+  left: 50%;
+  width: 450px;
+  margin-left: -250px;
+  font-size: 12px;
+  background-color: #fff;
+  border: 6px solid #7c7c7c;
+  _position: absolute;
+  font-family: "Microsoft YaHei";
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  visibility: hidden;
+}
+.lc-dialog-hd h3 {
+  font-size: 14px;
+  line-height: 16px;
+}
+.lc-dialog-hd h3.bold {
+  font-weight: 600;
+}
+.lc-dialog-close {
+  display: inline;
+  top: 8px;
+  right: 10px;
+  height: 20px;
+  line-height: 20px;
+  width: 20px;
+  overflow: hidden;
+  position: absolute;
+  text-align: center;
+  font-size: 30px;
+  font-family: "arial";
+  color: #666;
+  cursor: pointer;
+  font-weight: normal;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.lc-dialog-close:hover {
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  -ms-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+.lc-dialog-hd {
+  height: 25px;
+  background: #FAFCFF;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0px 0px 10px;
+  font-size: 12px;
+  zoom: 1;
+}
+.lc-dialog-bd {
+  position: relative;
+  padding-bottom: 46px;
+}
+.lc-dialog-content p {
+  line-height: 18px;
+  color: #666;
+}
+.lc-dialog-content {
+  width: 230px;
+  padding-left: 120px;
+  padding-top: 42px;
+}
+.lc-dialog-content h4 {
+  position: relative;
+  font-size: 18px;
+  line-height: 32px;
+  color: #333;
+  font-weight: 600;
+  padding-bottom: 5px;
+}
+.lc-dialog-content h4 .tip-icon {
+  position: absolute;
+  left: -50px;
+}
+.lc-dialog-operation {
+  margin-top: 40px;
+}
+.lc-dialog-operation-single .lc-ui-btn {
+  margin-left: 57px;
+}
+.lc-mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 9999;
+  background: #000;
+  filter: alpha(opacity=30);
+  opacity: .3;
+  _position: absolute;
+  width: 100%;
+  visibility: hidden;
+}
+.lc-mask-show {
+  visibility: visible;
+  -webkit-animation: lc-dialog-mask-show 0.3s;
+  -moz-animation: lc-dialog-mask-show 0.3s;
+  -ms-animation: lc-dialog-mask-show 0.3s;
+  -o-animation: lc-dialog-mask-show 0.3s;
+  animation: lc-dialog-mask-show 0.3s;
+  -webkit-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.lc-mask-hide {
+  visibility: hidden;
+  -webkit-animation: lc-dialog-mask-hide 0.3s;
+  -moz-animation: lc-dialog-mask-hide 0.3s;
+  -ms-animation: lc-dialog-mask-hide 0.3s;
+  -o-animation: lc-dialog-mask-hide 0.3s;
+  animation: lc-dialog-mask-hide 0.3s;
+  -webkit-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.lc-dialog-show {
+  visibility: visible;
+  -webkit-animation: lc-dialog-show 0.3s;
+  -moz-animation: lc-dialog-show 0.3s;
+  -ms-animation: lc-dialog-show 0.3s;
+  -o-animation: lc-dialog-show 0.3s;
+  animation: lc-dialog-show 0.3s;
+  -webkit-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.lc-dialog-hide {
+  visibility: hidden;
+  -webkit-animation: lc-dialog-hide 0.3s;
+  -moz-animation: lc-dialog-hide 0.3s;
+  -ms-animation: lc-dialog-hide 0.3s;
+  -o-animation: lc-dialog-hide 0.3s;
+  animation: lc-dialog-hide 0.3s;
+  -webkit-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@keyframes lc-dialog-mask-show {
+  0% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+}
+@keyframes lc-dialog-mask-hide {
+  0% {
+    opacity: 0.3;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+@keyframes lc-dialog-show {
+  0% {
+    opacity: 0;
+    transform: scale(1) translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes lc-dialog-hide {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+}
+/*# sourceMappingURL=dialog.css.map */
