@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片处理</title>
+    <link rel="stylesheet" href="//sub6153706.host517.zhujiwu.me/res/css/pc/common/luckyjourney.css?v=201703311057">
+</head>
+<body>
+<section class="luckyui-container">
+    <h1>图片分享</h1>
+    <p>
+        <a href="javascript:void(0)" class="J-btn" data-color="red">红色</a>
+    </p>
+    <div></div>
+    <iframe id="iframe" name="iframe" src=""></iframe>
+</section>
+
+
+<script type="text/javascript" data-main="http://sub6153706.host517.zhujiwu.me/res/js/main/search/page-pc-search-main" src="http://sub6153706.host517.zhujiwu.me/res/jslibs/require.min.js?v=201703311057"></script>
+<script type="text/javascript">
+    function onRequireJsDone(opt) {
+        console.log("onRequireJsDone>>", opt);
+
+        $(".J-btn").on("click", function (e) {
+            console.log("J-btn>>", e);
+            var $this = $(this);
+            var color = $this.attr("data-color");
+            switch (color) {
+                case "red":
+                    window.PageObj.goToUrl({
+                        color: color
+                    });
+                    break;
+                default:
+
+            }
+        });
+    }
+    window.PageObj = {
+        goToUrl: function (opt) {
+            var color = opt.color;
+            if (color === "red") {
+
+            }
+            var targetUrl = "./gdGregwarImage.php?color=" + color;
+            $("#iframe").attr("src", targetUrl);
+        }
+    }
+</script>
+</body>
+</html>
