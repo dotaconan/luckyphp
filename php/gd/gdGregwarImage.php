@@ -95,11 +95,18 @@ $imgResult = $img
 
 //    ->inline("inline")
 
-    ->save('iconOut.png');
-//    ->get('jpeg');
+//    ->save('iconOut.png');
+    ->get('png');
 
-var_dump($imgResult);
+//    ->jpeg();
 
+//var_dump($imgResult);
 //$content=file_get_contents("heartOut.jpg");
-//header('Content-Type:image/jpg');
-//imagejpeg($img);
+
+//输出图片
+header('Content-Type:image/png');
+echo $imgResult;
+
+
+?>
+<!--<img src="--><?//= $imgResult  ?><!--" />-->
